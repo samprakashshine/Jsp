@@ -1,0 +1,79 @@
+<!DOCTYPE html>  
+    <html>  
+    <head>  
+     
+  
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+   <title>my Dairy</title> 
+    </head> 
+    <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/DMOZ_icon.svg/500px-DMOZ_icon.svg.pngy" type="image"/>
+<style>
+.well{
+text-align:center;
+font-size: 20px;
+color:White;
+background-color: #42f4f4;
+margin-bottom: 5px;
+background-image: url(https://vignette2.wikia.nocookie.net/planttycoon/images/9/9d/GRASS.JPG/revision/latest?cb=20160417142616);
+background-position: 0% 25%;
+background-size:cover;
+background-repeat: no-repeat;
+}
+
+.jumbotron{
+
+background-color: #42f4f4;
+margin-bottom: 0px;
+background-image: url(https://images.pexels.com/photos/60006/spring-tree-flowers-meadow-60006.jpeg?w=940&h=650&auto=compress&cs=tinysrgb);
+background-position: 15% 25%;
+background-size:cover;
+background-repeat: no-repeat;
+height: 700px;
+
+}
+.red{
+color:#ff1000;
+}
+.green{
+color:green;
+}
+label{
+display:inline-block;
+width:10%;
+text-align: left;
+}
+
+</style> 
+    <body>  
+ <div class ="container-fluid">  
+     <div class ="well"> My personal diary </div>   
+     <div class ="jumbotron">
+    <form action="SaveDairy" method="post">  
+    <table>  
+    <label > Date: <input type="text" class ="form-control red" name="date" placeholder="dd-mm-yyyy" /></label><br/>
+<label> Time: <input type="text"class ="form-control red" name="time" placeholder="hh-mm" ></label>
+    <!--tr><td>Date:</td><td><input type="text" name="date"/></td></tr>  
+    <tr><td>Time:</td><td><input type="text" name="time"/></td></tr> 
+    <!--tr><td>Data:</td><td><input type="text"  name="data" size="500" style="font-size:18pt;height:420px;width:500px;" rows="4" cols="50"/></td></tr-->  
+    <tr><td>Today:</td></tr></br>
+    <tr><td><textarea name="data" cols="120" rows="20" class= "form-control red "></textarea></td></tr>
+    <!--tr><td colspan="40"><input type="submit" value="Save Dairy"/></td></tr--> 
+    <button type="submit" class="btn-success" class ="form-control">Save Dairy
+<span class=" glyphicon glyphicon-hand-left"></span>
+</button><br/> 
+    </table>  
+    </form>  
+      
+    <br/>  
+    <a href="ViewDairy"><button type="submit" class="btn-success" class ="form-control">ViewDairy</button></a>
+    </div>  
+    </div>  
+    </body>  
+    </html>  
