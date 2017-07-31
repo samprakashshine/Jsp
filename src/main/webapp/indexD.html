@@ -11,7 +11,7 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <title>my Dairy</title> 
+   <title>my Diary</title> 
     </head> 
     <link rel="shortcut icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d8/DMOZ_icon.svg/500px-DMOZ_icon.svg.pngy" type="image"/>
 <style>
@@ -35,7 +35,7 @@ background-image: url(https://images.pexels.com/photos/60006/spring-tree-flowers
 background-position: 15% 25%;
 background-size:cover;
 background-repeat: no-repeat;
-height: 700px;
+height: 600px;
 
 }
 .red{
@@ -55,7 +55,7 @@ text-align: left;
  <div class ="container-fluid">  
      <div class ="well"> My personal diary </div>   
      <div class ="jumbotron">
-    <form action="SaveDairy" method="post">  
+    <form action="SaveDiary" method="post">  
     <table>  
     <label > Date: <input type="text" class ="form-control red" name="date" placeholder="dd-mm-yyyy" /></label><br/>
 <label> Time: <input type="text"class ="form-control red" name="time" placeholder="hh-mm" ></label>
@@ -63,16 +63,17 @@ text-align: left;
     <tr><td>Time:</td><td><input type="text" name="time"/></td></tr> 
     <!--tr><td>Data:</td><td><input type="text"  name="data" size="500" style="font-size:18pt;height:420px;width:500px;" rows="4" cols="50"/></td></tr-->  
     <tr><td>Today:</td></tr></br>
-    <tr><td><textarea name="data" cols="120" rows="20" class= "form-control red "></textarea></td></tr>
-    <!--tr><td colspan="40"><input type="submit" value="Save Dairy"/></td></tr--> 
-    <button type="submit" class="btn-success" class ="form-control">Save Dairy
+    <tr><td><textarea name="data" cols="80" rows="10" class= "form-control red "></textarea></td></tr>
+    <!--tr><td colspan="40"><input type="submit" value="Save Diary"/></td></tr--> 
+    <button type="submit" class="btn btn-success out" class ="form-control">Save Diary
 <span class=" glyphicon glyphicon-hand-left"></span>
 </button><br/> 
     </table>  
     </form>  
       
     <br/>  
-    <a href="ViewDairy"><button type="submit" class="btn-success" class ="form-control">ViewDairy</button></a>
+    <a href="ViewDiary"><button type="submit" class="btn btn-primary out" class ="form-control">ViewDiary</button></a>
+    <a href="/Logout"><button class="btn btn-danger out">Sign Out</button></a>
     </div>  
     </div>  
     </body>  

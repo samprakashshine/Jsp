@@ -7,8 +7,8 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;  
 import javax.servlet.http.HttpServletRequest;  
 import javax.servlet.http.HttpServletResponse;  
-@WebServlet("/ViewDairy")  
-public class ViewDairy extends HttpServlet {  
+@WebServlet("/ViewDiary")  
+public class ViewDiary extends HttpServlet {  
     protected void doGet(HttpServletRequest request, HttpServletResponse response)   
                throws ServletException, IOException {  
         response.setContentType("text/html");  
@@ -16,9 +16,9 @@ public class ViewDairy extends HttpServlet {
         // request.getRequestDispatcher("SaveServlet").include(request, response);  
         out.println("<a href='indexD.html'>Add New Day</a>"); 
        
-        out.println("<h1>Dairy  List</h1>");  
+        out.println("<h1>Diary  List</h1>");  
           
-        List<Dairy> list=DairyDao.getAllDairy();  
+        List<Diary> list=DiaryDao.getAllDiary();  
           
         out.print("<table border='1' width='100%'>");  
         out.print("<tr>");  
@@ -29,14 +29,14 @@ public class ViewDairy extends HttpServlet {
                      out.print("<th>Edit</th>");
                       out.print("<th>Delete</th>");
         out.print(" </tr>");
-        for(Dairy d:list){  
+        for(Diary d:list){  
          out.print("<tr>");
                  out.print("<td>"+d.getDate()+"</td>"); 
                  out.print("<td>"+d.getTime()+"</td>");
                  out.print("<td>"+d.getData()+"</td>");
                 
-                 out.print("<td><a href='EditDairy?date="+d.getDate()+"'>edit</a></td>");
-                 out.print("<td><a href='DeleteDairy?date="+d.getDate()+"'>delete</a></td>");
+                 out.print("<td><a href='EditDiary?date="+d.getDate()+"'>edit</a></td>");
+                 out.print("<td><a href='DeleteDiary?date="+d.getDate()+"'>delete</a></td>");
                  out.print("</tr>");
         }  
         out.print("</table>");

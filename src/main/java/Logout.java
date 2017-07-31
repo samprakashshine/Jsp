@@ -14,12 +14,12 @@ import java.io.IOException;
                 response.setContentType("text/html");  
                 PrintWriter out=response.getWriter();  
                   
-                request.getRequestDispatcher("Login.jsp").include(request, response);  
+                request.getRequestDispatcher("Diary.html").include(request, response);  
                   
                 HttpSession session=request.getSession();  
                 session.invalidate();  
-                  
-                out.print("You are successfully Signed out!");  
+              
+                out.print("<h3>You are successfully Signed out!</h3>");  
                   
                 out.close();  
         }  

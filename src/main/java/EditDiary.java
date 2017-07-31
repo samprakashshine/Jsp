@@ -6,19 +6,19 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;  
 import javax.servlet.http.HttpServletRequest;  
 import javax.servlet.http.HttpServletResponse;  
-@WebServlet("/EditDairy")  
-public class EditDairy extends HttpServlet {  
+@WebServlet("/EditDiary")  
+public class EditDiary extends HttpServlet {  
     protected void doGet(HttpServletRequest request, HttpServletResponse response)   
            throws ServletException, IOException {  
         response.setContentType("text/html");  
         PrintWriter out=response.getWriter();  
-        out.println("<h1>Update Dairy</h1>");  
+        out.println("<h1>Update Diary</h1>");  
        // String time=request.getParameter("time");  
         
           
-        Dairy d=DairyDao.getDairyByDate(request.getParameter("date"));  
+        Diary d=DiaryDao.getDiaryByDate(request.getParameter("date"));  
           
-        out.print("<form action='EditDairy2' method='post'>");  
+        out.print("<form action='EditDiary2' method='post'>");  
         out.print("<table>");  
         out.print("<tr>");  
         out.println("<td>Date:</td><td><input type='text' name='date' value='"+d.getDate()+"'/></td>");

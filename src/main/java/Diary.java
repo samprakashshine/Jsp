@@ -1,5 +1,5 @@
 
- public class Dairy {  
+ public class Diary {  
       
     private String date,time,data;
     

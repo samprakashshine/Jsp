@@ -16,10 +16,10 @@ try{
      
   Connection con=LoginDao.getConnection();     
 PreparedStatement ps=con.prepareStatement(  
-"select * from admin_login where username=? and userpass=? ");  
+"select * from admin_login where username=? and userpass=?");  
 ps.setString(1,username);  
 ps.setString(2,userpass);  
-//ps.setString(3,user);
+//ps.setString(3,usermail);
       
 ResultSet rs=ps.executeQuery();  
 status=rs.next();  
@@ -36,7 +36,7 @@ PreparedStatement ps=con.prepareStatement(
 "select * from ex_user_login where username=? and userpass=? ");  
 ps.setString(1,username);  
 ps.setString(2,userpass);  
-//ps.setString(3,user);
+//ps.setString(3,usermail);
       
 ResultSet rs=ps.executeQuery();  
 status=rs.next();  

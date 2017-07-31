@@ -1,0 +1,18 @@
+public  class student
+{
+public static void main(String args[])
+{
+teacher c=new teacher()
+}
+
+}
+class teacher
+{
+static {
+system.out.println("In static block");
+}
+{
+system.out.println("In instance");
+}
+}
+

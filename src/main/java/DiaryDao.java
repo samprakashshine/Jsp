@@ -1,7 +1,7 @@
 import java.util.*;  
 import java.sql.*;  
   
-public class DairyDao {  
+public class DiaryDao {  
   
     public static Connection getConnection(){  
         Connection con=null;  
@@ -11,10 +11,10 @@ public class DairyDao {
         }catch(Exception e){System.out.println(e);}  
         return con;  
     }  
-    public static int save(Dairy d){  
+    public static int save(Diary d){  
         int status=0;  
         try{  
-            Connection con=DairyDao.getConnection();  
+            Connection con=DiaryDao.getConnection();  
             PreparedStatement ps=con.prepareStatement(  
                          "insert into day(date,time,data) values (?,?,?)"); 
            
@@ -31,15 +31,15 @@ public class DairyDao {
         return status;  
     }  
         
-    public static List<Dairy> getAllDairy(){  
-        List<Dairy> list=new ArrayList<Dairy>();  
+    public static List<Diary> getAllDiary(){  
+        List<Diary> list=new ArrayList<Diary>();  
           
         try{  
-            Connection con=DairyDao.getConnection();  
+            Connection con=DiaryDao.getConnection();  
             PreparedStatement ps=con.prepareStatement("select * from day  ");  
             ResultSet rs=ps.executeQuery();  
             while(rs.next()){  
-                Dairy d=new Dairy();  
+                Diary d=new Diary();  
               
                 d.setDate(rs.getString(1));  
                 d.setTime(rs.getString(2));  
@@ -54,7 +54,7 @@ public class DairyDao {
 public static int delete(String date){  
         int status=0;  
         try{  
-            Connection con=DairyDao.getConnection();  
+            Connection con=DiaryDao.getConnection();  
             PreparedStatement ps=con.prepareStatement("delete from day where date=?");  
             ps.setString(1,date);  
             status=ps.executeUpdate();  
@@ -64,10 +64,10 @@ public static int delete(String date){
           
         return status;  
     } 
-     public static int update(Dairy d){  
+     public static int update(Diary d){  
         int status=0;  
         try{  
-            Connection con=DairyDao.getConnection();  
+            Connection con=DiaryDao.getConnection();  
             PreparedStatement ps=con.prepareStatement(  
                          "update day set time=?,data=? where date=?");  
             ps.setString(1,d.getTime());  
@@ -83,11 +83,11 @@ public static int delete(String date){
           
         return status;  
     }  
-    public static Dairy getDairyByDate(String date){  
-        Dairy d=new Dairy();  
+    public static Diary getDiaryByDate(String date){  
+        Diary d=new Diary();  
           
         try{  
-            Connection con=DairyDao.getConnection();  
+            Connection con=DiaryDao.getConnection();  
             PreparedStatement ps=con.prepareStatement("select * from day where date=? ");  
             ps.setString(1,date);  
          
